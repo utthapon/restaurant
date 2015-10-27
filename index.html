@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/themes/default/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/app.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+         <script type="text/javascript">
+            
+           $(document).on("mobileinit",function (){
+               
+               $.mobile.defaultPageTransition="flow";//กำหนดค่า เริ่มต้น
+           });
+        </script>
+        <script src="js/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+       
+        
+    </head>
+    <body>
+        
+        <!-- page1 -->
+        <div  class="bg-main" data-role="page" id="home" data-title="Home" >
+            <div data-role="header" data-position="fixed" data-fullscreen="true">
+                <h1  class="page-header" >Welcome</h1>
+            </div>
+            <div data-role="content">
+                <a href="#main-menu" data-transition="flow">
+                    <img src="images/my_logo.png">
+                </a>
+                <a href="#main-menu"  data-role="button" data-inline="true" data-transition="flow" data-icon="bars" data-iconpos="right">เมนูหลัก</a>
+                <!-- data-role="button" สร้างปุ่ม , data-inline="true"ปรับขนาดปุ่มให้เท่าอักษร , data-icon="bars"รูปไอคอน -->
+                <br>
+                <a href="#main-menu"  data-role="button" data-inline="true" data-transition="flow" data-icon="bars" data-iconpos="notext">เมนูหลัก</a><!-- data-iconpos="notext" ไม่แสดงข้อความ -->
+            </div>
+            <div data-role="footer" data-position="fixed"> 
+                <h1> &copy:Utthapon_Baac </h1>
+            </div>
+        </div>
+        
+        
+        <!-- page2 -->
+        <div data-role="page" id="main-menu" data-title="menu">
+            <div data-role="header" data-position="fixed">
+                <h1>Main Menu</h1>
+                <a href="" data-role="button" data-rel="back" data-icon="arrow-l" >back</a><!-- 1 add button in toolbar default at left-->
+                <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="notext" >home</a><!-- 2 add button in toolbar default at right-->
+            </div>
+            <div data-role="content">
+                <div data-role="controlgroup" data-type="horizontal" data-mini="true"><!-- menu แนวนอน -->
+                        <a data-role='button'  href="" data-icon="arrow-r">หน้าหลัก</a>
+                        <a data-role='button'  href="#about" data-icon="arrow-r"  data-rel="dialog">เกี่ยวกับ</a>
+                        <a data-role='button'  href="newhtml.html" rel="external" data-icon="arrow-r">สาขาต่างๆ</a>
+                        <a data-role='button'  href="#from"  data-icon="arrow-r">from</a>
+                        <a data-role='button'  href="#formlogin"  data-icon="arrow-r">เข้าสู่ระบบ</a>
+                        <a data-role='button'  href="test.php" rel="external"  data-icon="arrow-r">PHP</a>
+                        <a data-role='button'  href="#list"   data-icon="arrow-r">list</a>
+                </div>
+                <div data-role="controlgroup" class="ui-block-a" ><!-- menu แนวตั้ง -->
+                        <a data-role='button'  href="" data-icon="arrow-r">หน้าหลัก</a>
+                        <a data-role='button'  href="#about" data-icon="arrow-r" data-rel="dialog">เกี่ยวกับ</a>
+                        <a data-role='button'  href="newhtml.html" rel="external" data-icon="arrow-r">สาขาต่างๆ</a>
+                        <a data-role='button'  href="#from"  data-icon="arrow-r">from</a>
+                        <a data-role='button'  href="#formlogin"  data-icon="arrow-r">เข้าสู่ระบบ</a>
+                        <a data-role='button'  href="test.php" rel="external"  data-icon="arrow-r">PHP</a>
+                        <a data-role='button'  href="#list"   data-icon="arrow-r">list</a>
+                </div>
+                
+                  
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h1> &copy:Utthapon_Baac </h1>
+                <a href="" data-role="button" data-rel="back" data-icon="arrow-l" class="ui-btn-right" >back</a><!-- class="ui-btn-right" add button in footter at right-->
+            </div>
+        </div>
+        
+        
+        
+        <!-- page3 -->
+        <div data-role="page" id="about" data-title="about">
+            <div data-role="header" data-position="fix" data-add-back-btn="true" data-back-btn-text="กลับ" ><!-- data-add-back-btn="true" add button left automatic -->
+                <h1>about</h1>
+                
+                <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right" >home</a>
+            </div>
+            
+            <div data-role="content">
+                <p>Hello <a data-rel="popup" href="#pop1">BAAC</a></p>
+                <div data-role="popup" id ="pop1">
+                    <div data-role="header">
+                        <h1>ธกส</h1>
+                        <a data-icon="delete" data-iconpos="notext" data-rel="back" class="ui-btn-right"></a>
+                    </div>
+                    <div>
+                        <P>ธนาคารเพื่อการเกษตร</P>
+                    </div>
+                </div>
+                <img src="images/about.png">
+            </div>
+            
+            
+            <div data-role="footer"  data-position="fix">
+                <h1> &copy:Utthapon_Baac </h1>
+            </div>
+        </div>
+        
+        <!-- from -->
+        <div data-role='page' id='from'>
+            <div data-role="header" data-position="fix" data-add-back-btn="true" data-back-btn-text="กลับ" ><!-- data-add-back-btn="true" add button left automatic -->
+                <h1>from</h1>
+                
+                <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right" >home</a>
+            </div>
+            
+            <div data-role="content">
+                <form id='frm1'>
+                    
+                    <div class="ui-field-contain">
+                        <label for='txt-name'>Name : </label>
+                        <input type="text" id='txt-name' placeholder="โปรดกรอกชื่อ">
+                        
+                    </div>
+                    
+                     <div class="ui-field-contain">
+                        <label for='txt-pass'>Password : </label>
+                        <input type='password' id='txt-pass' > 
+                    </div>
+                    
+                    <div class="ui-field-contain"><!-- ต้องใ่ส่ @gmail.com -->
+                        <label for='txt-email'>E-mail : </label>
+                        <input type='email' id='txt-email' > 
+                    </div>
+                    
+                    <div class="ui-field-contain"><!--ต้องใส่ http:// -->
+                        <label for='txt-url'>URL : </label>
+                        <input type='url' id='txt-url' > 
+                    </div>
+                    
+                    <div class="ui-field-contain"><!--ต้องใส่ ตัวเลข -->
+                        <label for='txt-tel'>Tel : </label>
+                        <input type='tel' id='txt-tel' > 
+                    </div>
+                    
+                    <div class="ui-field-contain"><!--ต้องใส่ ตัวเลข -->
+                        <label for='txt-num'>Num : </label>
+                        <input type='number' id='txt-num' > 
+                    </div>
+                    
+                      <div class="ui-field-contain"><!--ต้องใส่  -->
+                        <label for='txt-date'>Date : </label>
+                        <input type='date' id='txt-date' > 
+                    </div>
+                    
+                      <div class="ui-field-contain"><!--ต้องใส่  -->
+                        <label for='txt-time'>Time : </label>
+                        <input type='time' id='txt-time' > 
+                    </div>
+                    
+                      <div class="ui-field-contain"><!--ต้องใส่  -->
+                        <label for='txt-datetime'>DateTime : </label>
+                        <input type='datetime' id='txt-datetime' > 
+                    </div>
+                    
+                    <div class="ui-field-contain"><!--ต้องใส่  -->
+                        <label for='txt-week'>Week : </label>
+                        <input type='week' id='txt-week' > 
+                    </div>
+                    
+                     
+                    <div class="ui-field-contain"><!--ต้องใส่  -->
+                        <label for='txt-month'>Month : </label>
+                        <input type='month' id='txt-month' > 
+                    </div>
+                    
+                     <div class="ui-field-contain"><!--ต้องใส่  -->
+                        <label for='txt-search'>Search : </label>
+                        <input type='search' id='txt-search' > 
+                    </div>
+                    
+                     <div class="ui-field-contain"><!--ต้องใส่  -->
+                        <label for='txt-range'>Range : </label>
+                        <input type='range' id='txt-range' min="10" max="50" step='5'> 
+                    </div>
+                    
+                    <div class="ui-field-contain"><!--ต้องใส่  ขยายช่องเพิ่มได้ aotomatic -->
+                        <label for='txt-area'>Remark : </label>
+                        <textarea id='txt-area'></textarea>
+                    </div>
+                    
+
+                     <div class="ui-field-contain"><!-- -->
+                         <fieldset data-role='controlgroup' data-type='horizontal'>
+                             <label for='rd11'>Bkk : </label>
+                            <input type='radio' name='rd-prv' id='rd11' >
+                           <label for='rd22'>Non : </label>
+                            <input type='radio' name='rd-prv' id='rd22' >
+                         </fieldset>
+                    </div>
+                    
+                     <div class="ui-field-contain"><!-- -->
+                             <label for='rd1'>Bkk : </label>
+                            <input type='radio' name='rd-prv' id='rd1' >
+                           <label for='rd2'>Non : </label>
+                            <input type='radio' name='rd-prv' id='rd2' >
+                    </div>
+                   
+                    
+                    
+                     <div class="ui-field-contain"><!-- -->
+                           <fieldset data-role='controlgroup' data-type='horizontal'>
+                            <label for='ck11'>BKK : </label>
+                            <input type='checkbox' name='ck-prv' id='ck11' >
+                           <label for='ck22'>NON : </label>
+                            <input type='checkbox' name='ck-prv' id='ck22' >
+                          </fieldset>
+                   </div>
+                    
+                    
+                    <div class="ui-field-contain"><!-- -->
+                            <label for='ck1'>BKK : </label>
+                            <input type='checkbox' name='ck-prv' id='ck1' >
+                           <label for='ck2'>NON : </label>
+                            <input type='checkbox' name='ck-prv' id='ck2' >
+                   </div>
+                    
+                    <div class="ui-field-contain"><!--ต้องใส่  ขยายช่องเพิ่มได้ aotomatic -->
+                        <label for='sell'>จังหวัด : </label>
+                        <select id='sell' data-native-menu='false'>
+                            <option value="1">Bkk</option>
+                            <option value="2">Non</option>
+                        </select>
+                    </div>
+                    
+                    <div class="ui-field-contain"><!--ต้องใส่  ขยายช่องเพิ่มได้ aotomatic -->
+                        <label for='sell1'>จังหวัด : </label>
+                        <select id='sell1' data-native-menu='false' multiple="mutiple">
+                            <option value="1">Bkk</option>
+                            <option value="2">Non</option>
+                            <option value="3">chon</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+  
+            <div data-role="footer"  data-position="fix">
+                <h1> &copy:Utthapon_Baac </h1>
+            </div>
+        </div>
+            
+        <!-- from login-->
+        
+        
+            <div data-role='page' id='formlogin'>
+            <div data-role="header" data-position="fix" data-add-back-btn="true" data-back-btn-text="กลับ" ><!-- data-add-back-btn="true" add button left automatic -->
+                <h1>Login</h1>
+                
+                <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right" >home</a>
+                </div>
+            
+                <div data-role="content">
+                  <form id='frmlogin'>
+                    
+                    <div class="ui-field-contain">
+                        <label for='txt-email'>UserName : </label>
+                        <input type="email" id='txt-email' placeholder="โปรดกรอก UserName" data-clear-btn='true'>
+                        <label for='txt-pass'>Password : </label>
+                        <input type="password" id='txt-pass' placeholder="โปรดกรอก Password" data-clear-btn='true'>
+                    </div>
+                      
+                     <div class="ui-grid-b"><!-- grid row-->
+                        <div class="ui-block-a"><!-- grid collum -->
+                            
+                        </div>
+                        <div class="ui-block-b"><!-- grid collum -->
+                            <a href="#forminfo" data-role="button" data-inline="true" data-transition="flow" data-icon="bars"> Login</a>
+                            
+                        </div>
+                        <div class="ui-block-c"><!-- grid collum -->
+                           
+                        </div>      
+                    </div>
+                  </form>
+                </div>   
+                
+                 <div data-role="footer"  data-position="fix">
+                <h1> &copy:Utthapon_Baac </h1>
+            </div>
+            </div>
+        
+         <!-- from information-->
+      
+            <div data-role='page' id='forminfo'>
+                <div data-role="header" data-position="fix" data-add-back-btn="true" data-back-btn-text="กลับ" ><!-- data-add-back-btn="true" add button left automatic -->
+                <h1>Information</h1>
+                
+                <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right" >home</a>
+                </div>
+            
+                <div data-role="content">
+                
+                </div>   
+                
+                 <div data-role="footer"  data-position="fix">
+                <h1> &copy:Utthapon_Baac </h1>
+                </div>
+            </div>
+         
+         
+         
+         <section data-role="page" id="list">
+             <div data-role="header" data-position="fix" data-add-back-btn="true" data-back-btn-text="กลับ" data-theme="b">
+                 <h2>List</h2>
+                  <a href="#home" data-role="button" data-icon="arrow-r" data-iconpos="notext" class="ui-btn-right" >home</a>
+             </div>
+             <div data-role="content">
+                 <ul>
+                     <li>A</li>
+                     <li>B</li>
+                     <li>C</li>
+                 </ul>
+                 <ol>
+                     <li>A</li>
+                     <li>B</li>
+                     <li>C</li>
+                 </ol>
+                 
+                 <ul data-role="listview" data-inset="true" ><!-- data-role="listview" ประกาศ list  data-inset="true" ทำขอบ วน-->
+                     <li><a href="" >A</a></li>
+                     <li data-icon="forward"><a href=""  >B</a></li>
+                     <li data-icon="false"><a href="" >C</a></li>
+                 </ul>
+                 
+                 <br>
+                 <ol data-role="listview" data-inset="true" data-autodividers="true" >
+                      <li><a href="" >A</a></li>
+                     <li data-role="list-divider"><a href=""  >B</a></li>
+                     <li data-icon="false"><a href="" >C</a></li>
+                 </ol>
+                 
+                 <br>
+                 <ol data-role="listview" data-inset="true" data-autodividers="true" data-split-icon="plus" data-filter="true"
+                     data-filter-placeholder="please select" >
+                      <li data-filtertext="ก">
+                          <a>
+                              <img src="images/icon.jpg"><!-- ขนาด default-->
+                              <h2>A</h2>
+                              <p>remark1</p>
+                              <p>remark2</p>
+                          </a>
+                          <a href=""></a>
+                      </li>
+                     <li >
+                         <a>
+                             <div><img src="images/icon.jpg"></div><!-- ขนาดเท่ารูปจริง-->
+                              B
+                              <p class="ui-li-aside ui-li-count">12</p>
+                          </a>
+                     </li>
+                     <li ><a href="" >
+                             <img src="images/icon.jpg">
+                             C
+                         </a>
+                     </li>
+                 </ol>
+                 
+                 <br>
+                <div data-role="collapsible-set">
+                   <div data-role="collapsible">
+                        <h2>list</h2>
+                          <ul data-role="listview" data-inset="false" ><!-- data-role="listview" ประกาศ list  data-inset="true" ทำขอบ วน-->
+                               <li><a href="" >A</a></li>
+                               <li data-icon="forward"><a href=""  >B</a></li>
+                               <li data-icon="false"><a href="" >C</a></li>
+                           </ul>
+                    </div>
+                    <div data-role="collapsible">
+                        <h2>list</h2>
+                          <ul data-role="listview" data-inset="false" ><!-- data-role="listview" ประกาศ list  data-inset="true" ทำขอบ วน-->
+                               <li><a href="" >A</a></li>
+                               <li data-icon="forward"><a href=""  >B</a></li>
+                               <li data-icon="false"><a href="" >C</a></li>
+                           </ul>
+                    </div>
+                </div>
+                 
+                 <br>
+                 <form class="ui-filterable"> 
+                         <input type="search" id="auto-input">
+                 </form>
+                 <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-input="#auto-input" data-inset="true">
+                     <li><a>กทม</a></li>
+                     <li><a>นนทบุรี</a></li>
+                     <li><a>เลย</a></li>
+                     
+                 </ul>
+                 
+                 
+                  <ul data-role="listview" data-filter="true" data-inset="true" id="lv1">
+                     <li><a>hello</a></li>
+                   
+                 </ul>
+                 
+                 
+             </div>
+         </section>
+         
+         
+            <script type="text/javascript">//event java script java mobile
+             var BService_url="http://172.18.27.17:8080/baac_php_services/restaurant_list.php";
+             var foods ;
+             $("#list").on("pageinit",function() {
+                 
+                 $("#lv1 li").remove();
+             });
+             
+             $("#list").on("pagebeforeshow",function() {
+                 alert("000000");
+                 $.getJSON(BService_url,function (data){//เก้บค่าที่ได้จาก json มาใส่ตัวแปร data
+                      $("#lv1 li").remove();
+                      foods=data.items;
+                      
+                      $.each(foods,function (index , food){
+                          //alert(food_name);
+                          $("#lv1").append("<li><a>"+food.food_name+"</a></li>");
+                      });
+                       $("#lv1").listview("refesh");
+                  
+                 });
+             });
+             
+            $(document).on("pageinit","#home",function (){
+                alert("Home init")
+            });
+            $(document).on("pagebeforeshow","#home",function (){
+                alert("home before show")
+            });
+            $(document).on("pageshow","#home",function (){
+                alert("home show")
+            });
+            
+            $(document).on("pageinit","#about",function (){
+                alert("about init")
+            });
+            $(document).on("pageshow","#about",function (){
+                alert("about show")
+            });
+            
+            </script>
+        
+        
+        
+        
+        
+    </body>
+</html>
